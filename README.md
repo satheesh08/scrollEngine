@@ -28,6 +28,10 @@ This LWC solves that by rendering **only visible rows**, keeping memory and DOM 
 
 ---
 
+## ⚒️ How it Works:
+![325571845-872ef61f-e303-49a4-b4a3-45026a57a44a](https://github.com/user-attachments/assets/75b2284c-a8aa-45a6-ad64-e528a9681a24)
+
+
 ## ✅ Features
 
 * 🔹 **Virtual scrolling** for thousands of records
@@ -41,6 +45,10 @@ This LWC solves that by rendering **only visible rows**, keeping memory and DOM 
 ---
 
 ## 🔌 Integration Guide
+
+## 🪴 To use this component in your Salesforce org, follow these steps:
+1. Clone the Repository: Clone this repository to your local machine.
+2. Deploy the Component: Use the Salesforce CLI to deploy the `scrollEngine` Lightning Web Component to your Salesforce org.
 
 ### 🔸 Inputs
 
