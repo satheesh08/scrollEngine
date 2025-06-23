@@ -1,0 +1,38 @@
+<template>
+  <div class="search-bar">
+    <lightning-input type="search" label="Search" variant="label-hidden" class="search-input" value={searchKey} onchange={handleSearch}></lightning-input>
+  </div>
+  <div class="table-container" style={containerStyle}>
+    <div class="table-header slds-theme_shade slds-border_bottom">
+      <template for:each={displayColumns} for:item="col">
+        <div key={col.fieldName} class="header-cell slds-p-horizontal_x-small slds-truncate slds-text-title_caps" data-field={col.fieldName} onclick={handleSort} title={col.label}>
+          <span class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+            <span class="slds-truncate">{col.label}</span>
+            <template if:true={col.isSorted}>
+              <lightning-icon icon-name={col.sortIcon} size="x-small" alternative-text="Sorted" class="sort-icon slds-m-left_xx-small"></lightning-icon>
+            </template>
+          </span>
+        </div>
+      </template>
+    </div>
+    <template if:true={isLoading}>
+      <div class="loading-overlay">
+        <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+      </div>
+    </template>
+    <div class="table-body" onscroll={handleScroll}>
+      <div style={spacerStyleTop}></div>
+      <template for:each={visibleData} for:item="row">
+        <div key={row.Id} class="row">
+          <template for:each={row._cells} for:item="cell">
+            <div key={cell.key} class="cell">{cell.value}</div>
+          </template>
+        </div>
+      </template>
+      <div style={spacerStyleBottom}></div>
+    </div>
+  </div>
+  <template if:true={showEmpty}>
+    <div class="empty-state">No records found.</div>
+  </template>
+</template>
