@@ -33,7 +33,6 @@ This LWC solves that by rendering **only visible rows**, keeping memory and DOM 
 * 🔹 **Virtual scrolling** for thousands of records
 * 🔹 **Sticky headers**
 * 🔹 **Column sorting**
-* 🔹 **Search with debounce**
 * 🔹 **Fallback sample data** if nothing is passed
 * 🔹 Works inside **Lightning Flows** or **any LWC context**
 * 🔹 **Custom table height**
