@@ -55,11 +55,11 @@ This LWC solves that by rendering **only visible rows**, keeping memory and DOM 
 ### 🔸 Usage in Another LWC
 
 ```html
-<c-virtual-scroll-table
+<c-scroll-engine
     columns={myColumns}
     data={myData}
     table-height="400"
-></c-virtual-scroll-table>
+></c-scroll-engine>
 ```
 
 ```js
