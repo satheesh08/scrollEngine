@@ -1,0 +1,106 @@
+.table-container {
+    border: 1px solid #ccc;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-input {
+    width: 200px;
+    min-width: 150px;
+    font-size: 0.75rem;
+}
+
+
+.table-body {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #eee;
+    background: white;
+}
+
+.header-cell {
+    flex: 1;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    height: 40px;
+    border-right: 1px solid #e0e0e0;
+    padding: 0 0.5rem;
+    overflow: hidden;
+}
+
+.cell {
+    flex: 1;
+    padding: 0 0.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sticky-header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background: #f4f6f9;
+    z-index: 10;
+    border-bottom: 2px solid #ccc;
+}
+
+.table-header {
+    display: flex;
+    background: #f4f6f9;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.sort-icon {
+    --slds-c-icon-color-foreground: #0070d2;
+}
+
+.sort-indicator {
+    font-size: 0.75rem;
+    padding-left: 4px;
+    color: #444;
+}
+
+.row:hover {
+    background: #f3f3f3;
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.empty-state {
+    text-align: center;
+    color: #999;
+    padding: 1rem;
+    font-style: italic;
+}
